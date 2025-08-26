@@ -1,0 +1,33 @@
+# Envs & caches
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+pytest-cache-files-*/
+
+# IDE
+.idea/
+.vscode/
+
+# Local config/secrets
+fx-proto/.env
+
+# Data & outputs
+fx-proto/data/raw/
+fx-proto/data/processed/
+fx-proto/data/external/
+fx-proto/src/fxproto/outputs/
+fx-proto/src/fxproto/outputs/charts/
+fx-proto/src/fxproto/outputs/reports/
+
+# Downloads / wheels (if you use them)
+wheelhouse/
+
+# OS cruft / editor backups
+.DS_Store
+Thumbs.db
+*~
+*.swp
+*.swo

@@ -1,0 +1,45 @@
+# Tiny graph for demo
+nodes:
+  - id: EUR
+    type: asset
+  - id: USD
+    type: asset
+  - id: ECB
+    type: institution
+  - id: Fed
+    type: institution
+  - id: InterestRate
+    type: factor
+  - id: GDP
+    type: factor
+
+# Directed edges with weights (0..1)
+edges:
+  - source: ECB
+    target: EUR
+    weight: 0.6
+  - source: Fed
+    target: USD
+    weight: 0.6
+  - source: InterestRate
+    target: USD
+    weight: 0.4
+  - source: GDP
+    target: EUR
+    weight: 0.4
+  - source: EUR
+    target: USD
+    weight: 0.3   # EUR strength can weaken USD in EURUSD context
+  - source: USD
+    target: EUR
+    weight: 0.3
+
+scenarios:
+  - id: EU_negative_GDP_shock
+    description: "Simulate a negative EU GDP surprise that pressures EUR"
+    shocks:
+      - node: GDP
+        delta: -0.5      # negative shock to EU GDP factor
+      - node: ECB
+        delta: -0.2      # dovish tilt (loosens EUR)
+    observe_nodes: [EUR, USD]

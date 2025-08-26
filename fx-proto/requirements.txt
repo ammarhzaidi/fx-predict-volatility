@@ -1,0 +1,33 @@
+# Core scientific stack
+numpy
+pandas
+scikit-learn
+matplotlib
+seaborn
+
+# Deep learning (CPU only)
+torch==2.2.2+cpu
+torchvision==0.17.2+cpu
+torchaudio==2.2.2+cpu
+--extra-index-url https://download.pytorch.org/whl/cpu
+
+# Data sources
+yfinance          # OHLCV from Yahoo Finance
+requests          # fallback for APIs
+
+# Config & environment
+python-dotenv     # load .env
+pyyaml            # YAML configs
+
+# CLI & logging
+typer[all]        # CLI framework
+rich              # colorful logging/CLI output
+
+# Graph demo
+networkx
+
+# GUI (prototype demo)
+streamlit
+
+# Testing
+pytest

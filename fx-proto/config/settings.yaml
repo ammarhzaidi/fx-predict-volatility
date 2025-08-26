@@ -1,0 +1,15 @@
+# App-level settings
+pair: EURUSD
+horizon: 5   # forecast steps ahead (days if interval=1d)
+
+dates:
+  train_start: "2018-01-01"
+  train_end:   "2023-12-31"
+  test_start:  "2024-01-01"
+  test_end:    "2024-12-31"
+
+paths:
+  data_dir: "fx-proto/data"
+  outputs_dir: "src/fxproto/outputs"
+
+random_seed: 42

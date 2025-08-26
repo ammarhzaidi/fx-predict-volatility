@@ -1,0 +1,15 @@
+# Data source config
+source: yfinance
+interval: "1d"
+
+symbol_map:
+  EURUSD: "EURUSD=X"   # <-- nested mapping; colons are fine here
+
+# Optional: default columns to keep/use if you want to enforce schema
+columns:
+  - Open
+  - High
+  - Low
+  - Close
+  - Adj Close
+  - Volume
