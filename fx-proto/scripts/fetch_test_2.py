@@ -1,6 +1,5 @@
 # scripts/test_fetch_2.py
 
-from datetime import date
 import matplotlib.pyplot as plt
 from fxproto.data import fetch_ohlcv
 

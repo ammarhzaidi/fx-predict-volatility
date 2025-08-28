@@ -3,10 +3,11 @@ pair: EURUSD
 horizon: 5   # forecast steps ahead (days if interval=1d)
 
 dates:
-  train_start: "2018-01-01"
-  train_end:   "2023-12-31"
-  test_start:  "2024-01-01"
-  test_end:    "2024-12-31"
+  train_start: "2024-08-26"
+  train_end:   "2025-05-26"   # first ~9 months → train
+  test_start:  "2025-05-27"   # last ~3 months → test
+  test_end:    "2025-08-26"
+
 
 paths:
   data_dir: "fx-proto/data"

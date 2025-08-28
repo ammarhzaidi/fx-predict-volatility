@@ -1,11 +1,10 @@
 # scripts/test_fetch_2.py
 
-from datetime import date
 import matplotlib.pyplot as plt
 from fxproto.data import fetch_ohlcv
 
 def main():
-    df = fetch_ohlcv("EURUSD", start="2024-06-01", end="2024-09-01", interval="1d", save_csv=True)
+    df = fetch_ohlcv("EURUSD", start="2024-08-26", end="2025-08-26", interval="1d", save_csv=True)
     print(df.head())
 
     plt.figure(figsize=(10,5))
