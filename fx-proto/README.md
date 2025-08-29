@@ -84,3 +84,8 @@
 - GUI adds a polished “Select → Run → Results” experience without polluting core logic.  
 - Tests catch shape/leakage bugs early.  
 - Gives you baseline + graph demo + visuals in one week → perfect for your meeting.
+
+
+
+
+
