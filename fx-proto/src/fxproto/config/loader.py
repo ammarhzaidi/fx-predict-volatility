@@ -135,7 +135,10 @@ def _to_graph(d: dict) -> GraphCfg:
 @lru_cache(maxsize=1)
 def get_config() -> AppConfig:
     """Load and cache all YAML configs into a single typed config object."""
-    cfg_dir = config_dir()
+    # FIXED: Use the Path object directly, don't call it as function
+    from fxproto.utils.paths import config_dir
+
+    cfg_dir = config_dir  # It's already a Path object, don't call it!
     settings_raw = _read_yaml(cfg_dir / "settings.yaml")
     data_raw = _read_yaml(cfg_dir / "data.yaml")
     graph_raw = _read_yaml(cfg_dir / "graph.yaml")
